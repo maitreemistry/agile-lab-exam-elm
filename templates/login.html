@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employee Leave Login</title>
+</head>
+<body>
+  <h1>Employee Leave Management</h1>
+  <h2>Login</h2>
+  {% for category, message in get_flashed_messages(with_categories=true) %}
+    <p role="alert" class="{{ category }}">{{ message }}</p>
+  {% endfor %}
+  <form method="post" action="{{ url_for('login') }}">
+    <label for="username">Username</label>
+    <input id="username" name="username" required>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" required>
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
