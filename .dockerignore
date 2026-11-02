@@ -1,0 +1,8 @@
+.git
+.pytest_cache
+__pycache__
+*.py[cod]
+.venv
+venv
+test_*.py
+selenium_login_test.py
